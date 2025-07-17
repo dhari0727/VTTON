@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    padding: 20px;
+}
+
+.left, .right {
+    width: 50%;
+    padding: 10px;
+}
+
+.clothes-list img {
+    height: 120px;
+    margin: 10px;
+    cursor: pointer;
+    border: 2px solid #ccc;
+}
+
+.avatar {
+    height: 400px;
+    border: 2px solid #333;
+}

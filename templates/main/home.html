@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Virtual Try-On</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <h2>Available Clothes (Size L)</h2>
+            <div class="clothes-list">
+                {% for cloth in clothes %}
+                    <img src="{{ cloth.image.url }}" class="cloth" onclick="tryOn('{{ cloth.image.url }}')">
+                {% endfor %}
+            </div>
+        </div>
+        <div class="right">
+            <h2>Avatar</h2>
+            <img id="avatar" src="/media/avatars/women_L.png" alt="Avatar" class="avatar">
+        </div>
+    </div>
+
+    <script>
+        function tryOn(clothImage) {
+            // For now just log - we’ll integrate ML later
+            alert("Try-on requested for: " + clothImage);
+        }
+    </script>
+</body>
+</html>
